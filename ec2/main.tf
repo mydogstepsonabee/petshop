@@ -49,7 +49,7 @@ resource "aws_instance" "node" {
     http_endpoint = "disabled"
     http_tokens   = "required"
   }
-  iam_instance_profile = "arn:aws:iam::438071034310:role/TenableReadOnlyTrustRole"
+  #iam_instance_profile = "arn:aws:iam::438071034310:role/TenableReadOnlyTrustRole"
 }
 
 # Create and assosiate an Elastic IP
