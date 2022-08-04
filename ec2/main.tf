@@ -36,13 +36,14 @@ resource "aws_instance" "node" {
     volume_size = 10
   }
 
-#do some test here
-#add some test here on feature1-1
+  #do some test here
+  #add some test here on feature1-1
 
   metadata_options {
     http_endpoint = "disabled"
     http_tokens   = "required"
   }
+  monitoring = true
 }
 
 # Create and assosiate an Elastic IP
