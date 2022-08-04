@@ -38,6 +38,7 @@ resource "aws_instance" "node" {
     volume_size = 10
   }
 
+#do some test here
 
   metadata_options {
     http_endpoint = "disabled"
