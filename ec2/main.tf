@@ -39,10 +39,10 @@ resource "aws_instance" "node" {
 #do some test here
 #add some test here on feature1-1
 
-  metadata_options {
-    http_endpoint = "disabled"
-    http_tokens   = "required"
-  }
+#  metadata_options {
+#    http_endpoint = "disabled"
+#    http_tokens   = "required"
+#  }
 }
 
 # Create and assosiate an Elastic IP
