@@ -15,7 +15,7 @@ logs
 .ssh
 *.pem
 *.out
-plan.*
+*.json
 
 # Scan
 config_*
