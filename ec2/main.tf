@@ -24,7 +24,7 @@ data "cloudinit_config" "user_data" {
 }
 # Create a EC2 Instance (Ubuntu 20)
 resource "aws_instance" "node" {
-  instance_type          = "t2.micro" # free instance
+  instance_type          = "t2.micro"
   ami                    = "ami-0cff7528ff583bf9a"
   key_name               = aws_key_pair.key_pair.id
   vpc_security_group_ids = [var.public_sg]
