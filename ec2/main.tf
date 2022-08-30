@@ -29,27 +29,17 @@ resource "aws_instance" "node" {
   key_name               = aws_key_pair.key_pair.id
   vpc_security_group_ids = [var.public_sg]
   subnet_id              = var.public_subnet
-
-  #user_data = file("${path.root}/ec2/userdata.tpl")
-  #user_data_replace_on_change = true
   user_data = data.cloudinit_config.user_data.rendered
 
   root_block_device {
     volume_size = 10
   }
 
-  #metadata_options {
-  # http_endpoint = "disabled"
-  # http_tokens   = "required"
-  #}
-  #monitoring = true
-
-
   metadata_options {
     http_endpoint = "disabled"
     http_tokens   = "required"
   }
-  #iam_instance_profile = "arn:aws:iam::438071034310:role/TenableReadOnlyTrustRole"
+  
 }
 
 # Create and assosiate an Elastic IP
