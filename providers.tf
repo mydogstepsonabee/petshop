@@ -18,8 +18,12 @@ terraform {
 
 provider "aws" {
   region                   = var.aws_region
-  shared_credentials_files = ["/Users/hxue/.aws/credentials"]
-  profile                  = "kaisya"
+  /*
+    shared_credentials_files = ["/Users/hxue/.aws/credentials"]
+    profile                  = "kaisya"
+  */
+    access_key = "akdfadoifuadofneefaef"
+  secret_key = "jdfadsfeohhfoahdfahdfadg"
   default_tags {
     tags = {
       Name  = "hao-demo"
