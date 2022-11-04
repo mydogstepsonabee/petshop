@@ -12,7 +12,7 @@ terraform {
     cloud {
     organization = "tcslimited"
     workspaces {
-      name = "petshop"
+      name = "project2-api"
     }
   }
   required_providers {
