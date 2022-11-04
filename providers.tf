@@ -9,6 +9,12 @@ terraform {
     dynamodb_table = "terraform_state_lock"
   }
   */
+    cloud {
+    organization = "tcslimited"
+    workspaces {
+      name = "petshop"
+    }
+  }
   required_providers {
     aws = {
       source = "hashicorp/aws"
@@ -22,8 +28,6 @@ provider "aws" {
     shared_credentials_files = ["/Users/hxue/.aws/credentials"]
     profile                  = "kaisya"
   */
-    access_key = "akdfadoifuadofneefaef"
-  secret_key = "jdfadsfeohhfoahdfahdfadg"
   default_tags {
     tags = {
       Name  = "hao-demo"
